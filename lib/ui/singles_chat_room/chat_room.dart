@@ -234,7 +234,6 @@ class ChatRoom extends StatelessWidget {
     return map['type'] == "text"
         ? Container(
             margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-            width: SizeConfig.screenWidth!,
             alignment: map['sentBy'] == _auth.currentUser!.displayName
                 ? Alignment.centerRight
                 : Alignment.centerLeft,
@@ -252,6 +251,7 @@ class ChatRoom extends StatelessWidget {
                       ),
                 SizedBox(width: getPropScreenWidth(7)),
                 Container(
+                  constraints: BoxConstraints(maxWidth: SizeConfig.screenWidth! * 0.8),
                   padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),

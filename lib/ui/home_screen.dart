@@ -48,19 +48,17 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
+  List splitUserName(String user) {
+    List userNameSplit = user.split("");
+    return userNameSplit;
+  }
+
   String chatRoomId(String user1, String user2) {
-    if (user1[0].toLowerCase().codeUnits[0] >
-        user2[0].toLowerCase().codeUnits[0]) {
+    List concatenateList = splitUserName(user1) + splitUserName(user2);
+    concatenateList.sort((a, b) => a.toString().toLowerCase().compareTo(b.toString().toLowerCase()));
+    String finalNameString = concatenateList.join().toLowerCase();
 
-      return "$user1$user2";
-    } else if (user1[0].toLowerCase().codeUnits[0] <
-        user2[0].toLowerCase().codeUnits[0]) {
-
-      return "$user2$user1";
-    } else {
-
-      return "${user1[0]}${user2[0]}";
-    }
+    return finalNameString;
   }
 
   void displayUserList() async {

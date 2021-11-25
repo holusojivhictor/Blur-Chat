@@ -50,6 +50,10 @@ class _AddMembersInGroupState extends State<AddMembersInGroup> {
   }
 
   void onAddMembers() async {
+    await _firestore.collection('users').doc(userMap!['uid']).update({
+      "isAdmin": false,
+    });
+
     membersList.add(userMap);
 
     await _firestore.collection('groups').doc(widget.groupChatId).update({
@@ -89,7 +93,8 @@ class _AddMembersInGroupState extends State<AddMembersInGroup> {
                     cursorHeight: 16,
                     decoration: InputDecoration(
                       contentPadding: const EdgeInsets.symmetric(vertical: 10),
-                      prefixIcon: const Icon(Icons.search, color: Colors.grey, size: 18),
+                      prefixIcon: const Icon(Icons.search,
+                          color: Colors.grey, size: 18),
                       border: outlineInputBorder(),
                       enabledBorder: outlineInputBorder(),
                       focusedBorder: outlineInputBorder(),
@@ -105,7 +110,8 @@ class _AddMembersInGroupState extends State<AddMembersInGroup> {
                       border: Border.all(color: Colors.grey),
                       shape: BoxShape.circle,
                     ),
-                    child: const Icon(Icons.search, size: 20, color: Colors.grey),
+                    child:
+                        const Icon(Icons.search, size: 20, color: Colors.grey),
                   ),
                 ),
               ],
