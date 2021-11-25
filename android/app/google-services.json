@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "346111256268",
+    "project_id": "blur-chat-a35e2",
+    "storage_bucket": "blur-chat-a35e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346111256268:android:dc1fe7d0229ea828e60469",
+        "android_client_info": {
+          "package_name": "com.morpheus.blur_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346111256268-e3ncil0mfomrftfi04n489ko411ncpd2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADaMH7RJfeCaO_aYBD8BF3tkSSXb9UXik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "346111256268-e3ncil0mfomrftfi04n489ko411ncpd2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
